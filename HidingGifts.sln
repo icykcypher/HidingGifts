@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HidingXMasGifts", "HidingXMasGifts\HidingXMasGifts.csproj", "{337AABE4-149A-4E88-A08C-902BD98DFDD6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HidingXMasGifts.App", "HidingXMasGifts\HidingXMasGifts.App.csproj", "{337AABE4-149A-4E88-A08C-902BD98DFDD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HidingXMasGifts.Domain", "Domain\HidingXMasGifts.Domain.csproj", "{76736373-1C84-44DD-9FB0-6D5285FC438A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HidingXMasGifts.Infrastructure", "HidingXMasGifts.Infrastructure\HidingXMasGifts.Infrastructure.csproj", "{AEE2A576-9C68-4663-B382-2B3878806ABB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{337AABE4-149A-4E88-A08C-902BD98DFDD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{337AABE4-149A-4E88-A08C-902BD98DFDD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{337AABE4-149A-4E88-A08C-902BD98DFDD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76736373-1C84-44DD-9FB0-6D5285FC438A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76736373-1C84-44DD-9FB0-6D5285FC438A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76736373-1C84-44DD-9FB0-6D5285FC438A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76736373-1C84-44DD-9FB0-6D5285FC438A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEE2A576-9C68-4663-B382-2B3878806ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEE2A576-9C68-4663-B382-2B3878806ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEE2A576-9C68-4663-B382-2B3878806ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEE2A576-9C68-4663-B382-2B3878806ABB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
