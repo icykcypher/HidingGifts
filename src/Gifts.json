@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 1,
+    "Name": "Spa Gift Basket",
+    "Description": "A relaxing spa gift basket with essential oils, candles, and bath salts, ideal for your mother.",
+    "FamilyMember": {
+      "Id": 1,
+      "Name": "Mother"
+    }
+  },
+  {
+    "Id": 2,
+    "Name": "Leather Wallet",
+    "Description": "A high-quality leather wallet, a classic gift for your father.",
+    "FamilyMember": {
+      "Id": 2,
+      "Name": "Father"
+    }
+  },
+  {
+    "Id": 3,
+    "Name": "Gaming Headset",
+    "Description": "A comfortable and immersive gaming headset, perfect for your brother.",
+    "FamilyMember": {
+      "Id": 3,
+      "Name": "Brother"
+    }
+  },
+  {
+    "Id": 4,
+    "Name": "Jewelry Box",
+    "Description": "A lovely jewelry box to keep treasured pieces organized, ideal for your sister.",
+    "FamilyMember": {
+      "Id": 4,
+      "Name": "Sister"
+    }
+  }
+]

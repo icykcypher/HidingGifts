@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HidingGifts.App", "HidingXM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HidingGifts.Domain", "HidingXMasGifts.Domain\HidingGifts.Domain.csproj", "{76736373-1C84-44DD-9FB0-6D5285FC438A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hiding.Infrastructure", "HidingXMasGifts.Infrastructure\Hiding.Infrastructure.csproj", "{AEE2A576-9C68-4663-B382-2B3878806ABB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HidingGifts.Infrastructure", "HidingXMasGifts.Infrastructure\HidingGifts.Infrastructure.csproj", "{AEE2A576-9C68-4663-B382-2B3878806ABB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

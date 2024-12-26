@@ -1,4 +1,4 @@
-﻿namespace HidingXMasGifts.Domain.Dtos
+﻿namespace HidingGifts.Domain.Dtos
 {
     public class FamilyMember
     {
