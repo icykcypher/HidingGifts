@@ -1,7 +1,11 @@
-﻿namespace HidingGifts.Infrastructure.Services.GiftHiding
+﻿using HidingGifts.Infrastructure.Services.DataAccessing;
+
+namespace HidingGifts.Infrastructure.Services.GiftHiding
 {
-    public class GiftHidingService
+    public class GiftHidingService(DataAccessService dataAccessService)
     {
+        private DataAccessService _dataAccessService = dataAccessService;
+
 
     }
 }

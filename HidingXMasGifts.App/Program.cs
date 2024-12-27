@@ -1,4 +1,4 @@
-﻿using HidingGifts.Infrastructure.Services.DataScrapping;
+﻿using HidingGifts.Infrastructure.Services.DataAccessing;
 
 namespace HidingGifts.App
 {
@@ -6,10 +6,9 @@ namespace HidingGifts.App
     {
         static void Main(string[] args)
         {
-            var service = new DataScrappingService();
-            var list = service.GetFamilyMembers();
+            var service = DataAccessService.Create();
 
-            foreach (var member in list)
+            foreach (var member in service.FamilyMembers)
             {
                 Console.WriteLine(member.Name);
             }
