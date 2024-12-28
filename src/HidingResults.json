@@ -1,0 +1,90 @@
+[
+  {
+    "Gift": {
+      "Id": 1,
+      "Name": "Spa Gift Basket",
+      "Description": "A relaxing spa gift basket with essential oils, candles, and bath salts, ideal for your mother.",
+      "FamilyMember": {
+        "Id": 1,
+        "Name": "Mother"
+      }
+    },
+    "HidingPlace": {
+      "Id": 6,
+      "Name": "Toolbox in the Garage",
+      "Description": "A locked toolbox in the garage, requiring a bit of effort to access.",
+      "ProbabilitiesToFind": {
+        "1": 0.0,
+        "2": 0.8,
+        "3": 0.2,
+        "4": 0.1
+      }
+    }
+  },
+  {
+    "Gift": {
+      "Id": 2,
+      "Name": "Leather Wallet",
+      "Description": "A high-quality leather wallet, a classic gift for your father.",
+      "FamilyMember": {
+        "Id": 2,
+        "Name": "Father"
+      }
+    },
+    "HidingPlace": {
+      "Id": 1,
+      "Name": "Kitchen Cabinet",
+      "Description": "A high cabinet often used to store spices and condiments, perfect for your mother.",
+      "ProbabilitiesToFind": {
+        "1": 0.99,
+        "2": 0.01,
+        "3": 0.1,
+        "4": 0.5
+      }
+    }
+  },
+  {
+    "Gift": {
+      "Id": 3,
+      "Name": "Gaming Headset",
+      "Description": "A comfortable and immersive gaming headset, perfect for your brother.",
+      "FamilyMember": {
+        "Id": 3,
+        "Name": "Brother"
+      }
+    },
+    "HidingPlace": {
+      "Id": 2,
+      "Name": "Garage Workbench",
+      "Description": "A sturdy workbench with drawers, often used by your father.",
+      "ProbabilitiesToFind": {
+        "1": 0.1,
+        "2": 0.8,
+        "3": 0.2,
+        "4": 0.1
+      }
+    }
+  },
+  {
+    "Gift": {
+      "Id": 4,
+      "Name": "Jewelry Box",
+      "Description": "A lovely jewelry box to keep treasured pieces organized, ideal for your sister.",
+      "FamilyMember": {
+        "Id": 4,
+        "Name": "Sister"
+      }
+    },
+    "HidingPlace": {
+      "Id": 8,
+      "Name": "Shoe Closet Drawer",
+      "Description": "A small drawer at the bottom of the shoe closet, rarely opened.",
+      "ProbabilitiesToFind": {
+        "1": 0.3,
+        "2": 0.3,
+        "3": 0.4,
+        "4": 0.4
+      }
+    }
+  }
+]

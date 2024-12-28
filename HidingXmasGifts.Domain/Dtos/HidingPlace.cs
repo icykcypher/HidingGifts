@@ -6,6 +6,6 @@
         public required string Name { get; set; } = string.Empty;
         public required string Description { get; set; } = string.Empty;
         public Gift? Gift { get; set; }
-        public required Dictionary<int, double> ProbabillitiesToFind { get; set; } = [];
+        public required Dictionary<int, double> ProbabilitiesToFind { get; set; } = [];
     }
 }

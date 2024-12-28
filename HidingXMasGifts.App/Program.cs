@@ -1,4 +1,5 @@
-﻿using HidingGifts.Infrastructure.Services.DataAccessing;
+﻿using HidingGifts.Infrastructure.Services.GiftHiding;
+using HidingGifts.Infrastructure.Services.DataOperating;
 
 namespace HidingGifts.App
 {
@@ -6,12 +7,9 @@ namespace HidingGifts.App
     {
         static void Main(string[] args)
         {
-            var service = DataAccessService.Create();
+            var service = new GiftHidingService(DataAccessService.Create());
 
-            foreach (var member in service.FamilyMembers)
-            {
-                Console.WriteLine(member.Name);
-            }
+            service.HideGifts();
         }
     }
 }
