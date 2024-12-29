@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HidingGifts.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HidingGifts.Domain.Dtos.FamilyMember">
+            <summary>
+            Represents a family member who is associated with gifts and hiding places.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Dtos.FamilyMember.Id">
+            <summary>
+            Gets or sets the unique identifier for the family member.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Dtos.FamilyMember.Name">
+            <summary>
+            Gets or sets the name of the family member.
+            </summary>
+        </member>
+        <member name="T:HidingGifts.Domain.Dtos.Gift">
+            <summary>
+            Represents a gift that can be assigned to a family member and hidden in a specific place.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Dtos.Gift.Id">
+            <summary>
+            Gets or sets the unique identifier for the gift.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Dtos.Gift.Name">
+            <summary>
+            Gets or sets the name of the gift.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Dtos.Gift.Description">
+            <summary>
+            Gets or sets the description of the gift.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Dtos.Gift.FamilyMember">
+            <summary>
+            Gets or sets the family member associated with the gift.
+            </summary>
+        </member>
+        <member name="M:HidingGifts.Domain.Dtos.Gift.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to the current gift.
+            </summary>
+            <param name="obj">The object to compare with the current gift.</param>
+            <returns>
+            <c>true</c> if the specified object is a <see cref="T:HidingGifts.Domain.Dtos.Gift"/> and has the same <see cref="P:HidingGifts.Domain.Dtos.Gift.Id"/>; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:HidingGifts.Domain.Dtos.Gift.GetHashCode">
+            <summary>
+            Serves as the default hash function for the <see cref="T:HidingGifts.Domain.Dtos.Gift"/> class.
+            </summary>
+            <returns>A hash code for the current gift, based on its <see cref="P:HidingGifts.Domain.Dtos.Gift.Id"/>.</returns>
+        </member>
+        <member name="T:HidingGifts.Domain.Dtos.HidingPlace">
+            <summary>
+            Represents a hiding place where a gift can be hidden.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Dtos.HidingPlace.Id">
+            <summary>
+            Gets or sets the unique identifier for the hiding place.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Dtos.HidingPlace.Name">
+            <summary>
+            Gets or sets the name of the hiding place.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Dtos.HidingPlace.Description">
+            <summary>
+            Gets or sets the description of the hiding place.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Dtos.HidingPlace.Gift">
+            <summary>
+            Gets or sets the gift hidden in this hiding place, if any.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Dtos.HidingPlace.ProbabilitiesToFind">
+            <summary>
+            Gets or sets the probabilities that specific family members will find the gift in this hiding place.
+            The key represents the family member's ID, and the value represents the probability (a double value between 0 and 1).
+            </summary>
+        </member>
+        <member name="T:HidingGifts.Domain.Interfaces.IDataAccessService">
+            <summary>
+            Provides access to data related to family members, gifts, and hiding places, 
+            and supports saving hiding assignments.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Interfaces.IDataAccessService.FamilyMembers">
+            <summary>
+            Gets the collection of family members.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Interfaces.IDataAccessService.Gifts">
+            <summary>
+            Gets the collection of gifts.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Interfaces.IDataAccessService.HidingPlaces">
+            <summary>
+            Gets the collection of hiding places.
+            </summary>
+        </member>
+        <member name="M:HidingGifts.Domain.Interfaces.IDataAccessService.SaveHidingResults(System.Collections.Generic.Dictionary{HidingGifts.Domain.Dtos.Gift,HidingGifts.Domain.Dtos.HidingPlace})">
+            <summary>
+            Saves the results of the hiding assignments.
+            </summary>
+            <param name="dict">
+            A dictionary mapping each gift to its assigned hiding place.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown if the <paramref name="dict"/> is null.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Thrown if the <paramref name="dict"/> contains no items.
+            </exception>
+        </member>
+        <member name="T:HidingGifts.Domain.Interfaces.IGiftHidingService">
+            <summary>
+            Defines a service for assigning gifts to hiding places based on specific criteria.
+            </summary>
+        </member>
+        <member name="M:HidingGifts.Domain.Interfaces.IGiftHidingService.HideGifts">
+            <summary>
+            Assigns each gift to an appropriate hiding place and performs the necessary data saving operations using IDataAccessService.
+            </summary>
+            <remarks>
+            The implementation should ensure that:
+            <list type="bullet">
+            <item>Each gift is assigned to a unique hiding place.</item>
+            <item>Hiding places are selected based on defined probabilities or criteria.</item>
+            <item>Results are saved to the data store after the assignments are made.</item>
+            </list>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">
+            Thrown if there are not enough hiding places for all gifts.
+            </exception>
+        </member>
+        <member name="T:HidingGifts.Domain.Static.StaticPaths">
+            <summary>
+            Provides static file paths for application data and results.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Static.StaticPaths.FamilyMembers">
+            <summary>
+            Gets the file path to the JSON file containing family member data.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Static.StaticPaths.Gifts">
+            <summary>
+            Gets the file path to the JSON file containing gift data.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Static.StaticPaths.HidingPlaces">
+            <summary>
+            Gets the file path to the JSON file containing hiding place data.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Domain.Static.StaticPaths.Results">
+            <summary>
+            Gets the file path to the JSON file where hiding results will be saved.
+            </summary>
+        </member>
+    </members>
+</doc>

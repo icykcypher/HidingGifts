@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HidingGifts.Infrastructure</name>
+    </assembly>
+    <members>
+        <member name="T:HidingGifts.Infrastructure.Services.DataOperating.DataAccessService">
+            <summary>
+            Provides data access functionality for family members, hiding places, and gifts.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Infrastructure.Services.DataOperating.DataAccessService.FamilyMembers">
+            <summary>
+            Gets the collection of family members.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Infrastructure.Services.DataOperating.DataAccessService.HidingPlaces">
+            <summary>
+            Gets the collection of hiding places.
+            </summary>
+        </member>
+        <member name="P:HidingGifts.Infrastructure.Services.DataOperating.DataAccessService.Gifts">
+            <summary>
+            Gets the collection of gifts.
+            </summary>
+        </member>
+        <member name="M:HidingGifts.Infrastructure.Services.DataOperating.DataAccessService.#ctor(System.Collections.Generic.IEnumerable{HidingGifts.Domain.Dtos.FamilyMember},System.Collections.Generic.IEnumerable{HidingGifts.Domain.Dtos.HidingPlace},System.Collections.Generic.IEnumerable{HidingGifts.Domain.Dtos.Gift})">
+            <summary>
+            Private constructor to initialize the service with the given data.
+            </summary>
+            <param name="familyMembers">Collection of family members.</param>
+            <param name="hidingPlaces">Collection of hiding places.</param>
+            <param name="gifts">Collection of gifts.</param>
+        </member>
+        <member name="M:HidingGifts.Infrastructure.Services.DataOperating.DataAccessService.Create">
+            <summary>
+            Creates an instance of <see cref="T:HidingGifts.Infrastructure.Services.DataOperating.DataAccessService"/> by loading data from JSON files.
+            </summary>
+            <returns>An initialized instance of <see cref="T:HidingGifts.Infrastructure.Services.DataOperating.DataAccessService"/>.</returns>
+            <remarks>Exits the application with an error code if data loading fails.</remarks>
+        </member>
+        <member name="M:HidingGifts.Infrastructure.Services.DataOperating.DataAccessService.GetFamilyMembers">
+            <summary>
+            Loads family member data from the corresponding JSON file.
+            </summary>
+            <returns>Collection of <see cref="T:HidingGifts.Domain.Dtos.FamilyMember"/>.</returns>
+            <exception cref="T:System.IO.IOException">Thrown if the JSON file cannot be found or read.</exception>
+        </member>
+        <member name="M:HidingGifts.Infrastructure.Services.DataOperating.DataAccessService.GetHidingPlaces">
+            <summary>
+            Loads hiding place data from the corresponding JSON file.
+            </summary>
+            <returns>Collection of <see cref="T:HidingGifts.Domain.Dtos.HidingPlace"/>.</returns>
+            <exception cref="T:System.IO.IOException">Thrown if the JSON file cannot be found or read.</exception>
+        </member>
+        <member name="M:HidingGifts.Infrastructure.Services.DataOperating.DataAccessService.GetGifts">
+            <summary>
+            Loads gift data from the corresponding JSON file.
+            </summary>
+            <returns>Collection of <see cref="T:HidingGifts.Domain.Dtos.Gift"/>.</returns>
+            <exception cref="T:System.IO.IOException">Thrown if the JSON file cannot be found or read.</exception>
+        </member>
+        <member name="M:HidingGifts.Infrastructure.Services.DataOperating.DataAccessService.SaveHidingResults(System.Collections.Generic.Dictionary{HidingGifts.Domain.Dtos.Gift,HidingGifts.Domain.Dtos.HidingPlace})">
+            <summary>
+            Saves hiding results to a JSON file.
+            </summary>
+            <param name="dict">A dictionary mapping gifts to hiding places.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if the dictionary is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown if the dictionary is empty.</exception>
+            <remarks>Exits the application with an error code if saving fails.</remarks>
+        </member>
+        <member name="T:HidingGifts.Infrastructure.Services.GiftHiding.GiftHidingService">
+            <summary>
+            Service for assigning gifts to hiding places based on probabilities.
+            </summary>
+            <remarks>
+            Initializes a new instance of the <see cref="T:HidingGifts.Infrastructure.Services.GiftHiding.GiftHidingService"/> class.
+            </remarks>
+            <param name="dataAccessService">The data access service used to retrieve and store data.</param>
+        </member>
+        <member name="M:HidingGifts.Infrastructure.Services.GiftHiding.GiftHidingService.#ctor(HidingGifts.Domain.Interfaces.IDataAccessService)">
+            <summary>
+            Service for assigning gifts to hiding places based on probabilities.
+            </summary>
+            <remarks>
+            Initializes a new instance of the <see cref="T:HidingGifts.Infrastructure.Services.GiftHiding.GiftHidingService"/> class.
+            </remarks>
+            <param name="dataAccessService">The data access service used to retrieve and store data.</param>
+        </member>
+        <member name="F:HidingGifts.Infrastructure.Services.GiftHiding.GiftHidingService._dataAccessService">
+            <summary>
+            Data access service providing family members, gifts, and hiding places.
+            </summary>
+        </member>
+        <member name="M:HidingGifts.Infrastructure.Services.GiftHiding.GiftHidingService.HideGifts">
+            <summary>
+            Assigns each gift to the best available hiding place based on probabilities.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+            Thrown if there are not enough unique hiding places for all gifts.
+            </exception>
+        </member>
+    </members>
+</doc>
