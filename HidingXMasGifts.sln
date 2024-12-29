@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HidingGifts.Domain", "Hidin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HidingGifts.Infrastructure", "HidingXMasGifts.Infrastructure\HidingGifts.Infrastructure.csproj", "{AEE2A576-9C68-4663-B382-2B3878806ABB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{ED4C6F3B-9567-4D1A-BAA7-E3A1F3DE7F18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{AEE2A576-9C68-4663-B382-2B3878806ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEE2A576-9C68-4663-B382-2B3878806ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEE2A576-9C68-4663-B382-2B3878806ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED4C6F3B-9567-4D1A-BAA7-E3A1F3DE7F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED4C6F3B-9567-4D1A-BAA7-E3A1F3DE7F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED4C6F3B-9567-4D1A-BAA7-E3A1F3DE7F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED4C6F3B-9567-4D1A-BAA7-E3A1F3DE7F18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
